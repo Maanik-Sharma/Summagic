@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Summagic</title>
+    <link rel="stylesheet" href="stylesheet.css">   
+    <script src="https://kit.fontawesome.com/c6ec6139fb.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/components/copy-button/copy-button.js"></script>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header>
+      <h1>Summagic!</h1>
+    </header>
+
+
+    <h1 id="header-page">Welcome to Summagic! <i class="fas fa-magic" style="color: #ed5565;"></i></h1> 
+    <h4>Transform Lengthy Texts into Instant Insights</h4>
+    <!-- <p>Our powerful AI-driven tool effortlessly condenses long articles, reports, and documents into clear and concise summaries. Save time, stay informed, and get straight to the point with just a click. Experience the magic of instant understanding! </p> -->
+    <p> Paste Text  >  Click on 'Do Magic!'  >  See Magic! </p>
+
+    <div class="container">
+      <div class="text-box">
+        <textarea id="text_to_summarize" name="text_to_summarize" placeholder="[Paste your text to summarize, between 200 to 100K characters]"                   maxlength="100000"></textarea>
+        <div class="button-container">
+          <label for="fileInput" class="upload-button">
+            <input type="file" id="fileInput" accept=".txt">
+            <!-- <input type="file" id="fileInput" accept=".txt, .doc, .docx, .pdf"> -->
+            <i class="fa-solid fa-upload"></i>
+            Upload
+          </label>
+          <button id="submit-button" class="submit-button">
+            <span class="submit-button-text">Do Magic!</span>
+          </button>
+        </div>
+      </div>
+      <div class="text-box">
+        <textarea id="summary" name="summarized_text" placeholder="Magic Box"></textarea>
+        <div class="button-container">
+          <sl-copy-button id="copyButton" class="copy-button" value="Copy"></sl-copy-button>
+          <!-- <i id="copyButton" class="fa-regular fa-copy copy-button" ></i> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <div class="main">
+        <div class="footer">
+            <div class="bubbles">
+                <!-- Bubble generation with JavaScript -->
+                <script>
+                    for (var i = 0; i < 128; i++) {
+                        var bubble = document.createElement('div');
+                        bubble.className = 'bubble';
+                        bubble.style.setProperty('--size', (2 + Math.random() * 4) + 'rem');
+                        bubble.style.setProperty('--distance', (6 + Math.random() * 4) + 'rem');
+                        bubble.style.setProperty('--position', (-5 + Math.random() * 110) + '%');
+                        bubble.style.setProperty('--time', (2 + Math.random() * 2) + 's');
+                        bubble.style.setProperty('--delay', (-1 * (2 + Math.random() * 2)) + 's');
+                        document.querySelector('.bubbles').appendChild(bubble);
+                    }
+                </script>
+            </div>
+            <div class="content">
+                <div>
+                    <!-- <div>
+                        <b>Eldew</b>
+                        <a href="#">Secuce</a>
+                        <a href="#">Drupand</a>
+                        <a href="#">Oceash</a>
+                        <a href="#">Ugefe</a>
+                        <a href="#">Babed</a>
+                    </div> -->
+                  <p id="p-footer">Our powerful AI-driven tool effortlessly condenses long articles, reports, and documents into clear and concise summaries. Save time, stay informed, and get straight to the point with just a click. Experience the magic of instant understanding! </p>
+                    <div>
+                      
+                        <b>Socials</b>
+                        <a href="https://x.com/yi_Decipher">X(twitter)</a>
+                        <a href="https://www.linkedin.com/in/maaniksharma/">Linkedin</a>
+                        <a href="https://github.com/Maanik-Sharma">github</a>
+                    </div>
+                </div>
+                <div>
+                    <!-- <a class="image" href="https://codepen.io/z-" target="_blank" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/happy.svg');"></a> -->
+                    <p>©yiDecipher</p>
+                </div>
+            </div>
+        </div>
+        <svg style="position:fixed; top:100vh;">
+            <defs>
+                <filter id="blob">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="blob" />
+                    <!-- feComposite(in="SourceGraphic" in2="blob" operator="atop") -->
+                </filter>
+            </defs>
+        </svg>
+    </div>
+
+    
+    <script src="script.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/components/copy-button/copy-button.js"></script>
+  </body>
+</html>

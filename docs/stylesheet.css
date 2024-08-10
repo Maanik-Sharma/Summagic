@@ -1,0 +1,322 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  text-align: center;
+  color:#f96c6c;
+}
+
+header {
+    height:40px;
+    width:100%;
+    position:fixed;
+    background:#f96c6c;
+    z-index:120;
+    color:#fff;
+}
+
+
+
+
+    /* left: 0;
+    bottom: 6em;
+    width: 100%;
+    height: calc(var(--heading-height) + 10em);
+    z-index: -1;
+    transform: skewY(-3.5deg);
+    background: 
+        linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+        url(https://images.unsplash.com/photo-1495464101292-552d0b52fe41?auto=format&fit=crop&w=1350&q=80) no-repeat center,
+        linear-gradient(#4e4376, #2b5876);
+    background-size: cover;
+    border-bottom: .2em solid #fff;
+} */
+
+
+
+
+
+
+
+.container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#header-page{
+  margin-top:50px;
+  text-align: center;
+  font-weight: bold;
+  color: #f96c6c;
+  margin-bottom: 30px;
+  font-size: 32px;
+  
+}
+
+h4 {
+  text-align: center;
+  font-weight: bold;
+  color: #f96c6c;
+  margin-bottom: 10px;
+  font-size: 30px;
+  
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: center;
+  
+  color:#fff;
+}
+
+#p-footer{
+      margin-bottom: 20px;
+      font-size: 18px;
+      text-align: center;
+      margin-left:140px;
+      color:#fff;
+      align-items:center;
+      justify-content:center;
+}
+
+.text-box {
+  width: 400px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+textarea {
+  height: 300px;
+  resize: none;
+  border: none;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.upload-button {
+  background-color: #ED5565;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  /* transform: skewY(3.5deg); */
+}
+
+.upload-button input[type="file"] {
+  display: none;
+}
+
+.copy-button::part(base) {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.submit-button {
+  position: relative;
+  background-color: #ED5565; /* #ef5b25 */
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: -5px;
+  /* Keeping existing styles */
+  margin-bottom: 0;
+    /* transform: skewY(3.5deg); */
+}
+
+
+.submit-button-text {
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.submit-button:disabled{
+  position: relative;
+  background-color: #ED5565;
+  color: #ffffff;
+  opacity: 40%;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: -5px;
+}
+
+.submit-button--loading .submit-button-text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.submit-button--loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@keyframes button-loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+
+/* footer */
+
+body{
+     background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('https://images.unsplash.com/photo-1495464101292-552d0b52fe41?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+  display:grid;
+  grid-template-rows: 1fr 10rem auto;
+  grid-template-areas:"main" "." "footer";
+  overflow-x:hidden;
+  /* background:#F5F7FA; */
+  min-height:100vh;
+  font-family: 'Open Sans', sans-serif;
+  .footer {
+      margin-top:120px;
+      margin-bottom:0;
+      z-index: 1;
+      margin-left:0;
+      margin-right0;
+      --footer-background:#ED5565;
+      display:grid;
+      position: relative;
+      grid-area: footer;
+      min-height:12rem;
+      .bubbles {
+          position: absolute;
+          top:0;
+          left:0;
+          right:0;
+          height:1rem;
+          background:var(--footer-background);
+          filter:url("#blob");
+          .bubble {
+              position: absolute;
+              left:var(--position, 50%);
+              background:var(--footer-background);
+              border-radius:100%;
+              animation:bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+                  bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+              transform:translate(-50%, 100%);
+          }
+      }
+      .content {
+          
+          z-index: 2;
+          display:grid;
+          grid-template-columns: 1fr auto;
+          grid-gap: 4rem;
+          padding:2rem;
+          background:var(--footer-background);
+          a, p {
+              color:#F5F7FA;
+              text-decoration:none;
+          }
+          b {
+              color:white;
+          }
+          p {
+              margin:0;
+              font-size:.75rem;
+          }
+          >div {
+              
+              display:flex;
+              /* margin-left:50px; */
+              flex-direction:column;
+              justify-content: center;
+              >div {
+                  /* margin-left:140px; */
+                  margin:1rem 2rem 2rem 10rem;
+                  >* {
+                      margin-right:.5rem;
+                  }
+              }
+              .image {
+                  align-self: center;
+                  width:4rem;
+                  height:4rem;
+                  margin:0.25rem 0;
+                  background-size: cover;
+                  background-position: center;
+              }
+          }
+      }
+  }
+}
+
+@keyframes bubble-size {
+  0%, 75% {
+      width:var(--size, 4rem);
+      height:var(--size, 4rem);
+  }
+  100% {
+      width:0rem;
+      height:0rem;
+  }
+}
+@keyframes bubble-move {
+  0% {
+      bottom:-4rem;
+  }
+  100% {
+      bottom:var(--distance, 10rem);
+  }
+}
